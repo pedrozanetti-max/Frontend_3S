@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+<h1>Geometria</h1>
+
+{% block conteudo %}
+
+<h1>Perimetro e Area</h1>
+<div class="calculos">
+
+    <div class="card_operacao">
+        <i class="icon-calculo bi bi-triangle-fill"></i>
+        <h2>triangulo equilateral</h2>
+        <form class="form-subtrair" action="{{ url_for('triangulo') }}" method="post">
+            <label>
+                <input placeholder="Diga o lado A" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if tri is defined %}
+                (lado * lado)*√3) /4 {{ tri }} metros quadrados
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-success">resultado</button>
+
+
+            <label>
+                <input placeholder="diga outro lado" name="form-n2" class="form-control">
+            </label>
+
+           <p class="resultado">
+                {% if tri is defined %}
+                (lado * lado)*√3) /4 {{ tri }} metros quadrados
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-success">resultado</button>
+
+        </form>
+
+    </div>
+
+<div class="card_operacao">
+    <i class="icon-calculo bi bi-hexagon-fill"></i>
+        <h2>hexagono</h2>
+        <form class="form-subtrair" action="{{ url_for('hexagono') }}" method="post">
+            <label>
+                <input placeholder="Perimetro" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if sub is defined %}
+                    {{ n1 }} - {{ n2 }} = {{ sub }}
+                {% else %}
+                {% endif %}
+            </p>
+
+
+            <button type="submit" class="btn btn-success">resultado</button>
+        </form>
+
+
+
+            <label>
+                <input placeholder="Area" name="form-n2" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if sub is defined %}
+                    {{ n1 }} - {{ n2 }} = {{ sub }}
+                {% else %}
+                {% endif %}
+            </p>
+
+
+            <button type="submit" class="btn btn-success">resultado</button>
+        </form>
+</div>
+    <div class="card_operacao">
+        <i class="icon-calculo bi bi-circle-fill"></i>
+        <h2>circulo</h2>
+        <form class="form-subtrair" action="{{ url_for('circulo') }}" method="post">
+            <label>
+                <input placeholder="Perimetro" name="form-n1"class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if mult is defined %}
+                    {{ n1 }} * {{ n2 }} = {{ mult }}
+                {% else %}
+                {% endif %}
+            </p>
+
+
+            <button type="submit" class="btn btn-success">resultado</button>
+
+            <label>
+                <input placeholder="Area" name="form-n2"class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if mult is defined %}
+                    {{ n1 }} * {{ n2 }} = {{ mult }}
+                {% else %}
+                {% endif %}
+            </p>
+
+
+            <button type="submit" class="btn btn-success">resultado</button>
+        </form>
+    </div>
+    <div class="card_operacao">
+        <i class="icon-calculo bi bi-square-fill"></i>
+        <h2>Retangulo</h2>
+        <form class="form-subtrair" action="{{ url_for('retangulo') }}" method="post">
+            <label>
+                <input placeholder="Perimetro" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if div is defined %}
+                    {{ n1 }} + {{ n2 }} = {{ div }}
+                {% else %}
+                {% endif %}
+            </p>
+
+
+            <button type="submit" class="btn btn-success">resultado</button>
+
+
+            <label>
+                <input placeholder="Area" name="form-n2" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if div is defined %}
+                    {{ n1 }} + {{ n2 }} = {{ div }}
+                {% else %}
+                {% endif %}
+            </p>
+
+
+            <button type="submit" class="btn btn-success">resultado</button>
+        </form>
+    </div>
+</div>
+
+        </div>
+
+    </a>
+</div>
+{% endblock%}
