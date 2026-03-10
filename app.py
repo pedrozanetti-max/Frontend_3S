@@ -118,6 +118,10 @@ def retangulo():
         return render_template("geometria.html")
 
 
+@app.route('/animais' )
+def animais():
+    return render_template('animais.html')
+
 #TODO Final do código
 
 if __name__ == '__main__':
