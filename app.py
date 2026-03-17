@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, flash
 
+from api_routes import routes
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'cr7'
 @app.route('/')
@@ -121,6 +123,21 @@ def retangulo():
 @app.route('/animais' )
 def animais():
     return render_template('animais.html')
+
+@app.route('/gatos')
+def listar_gatos():
+    gatos = routes.get_gatos()
+
+    print("antes",gatos)
+    for gato in gatos:
+        gato["temperament"] = gato["temperament"].split(',')
+        gato["image"] = routes.get_image()["url"]
+
+
+
+
+    return render_template("gatos.html", gatos=gatos)
+
 
 #TODO Final do código
 
