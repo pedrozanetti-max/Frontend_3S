@@ -19,6 +19,8 @@
 
 ## Funcionario
 <img width="1912" height="902" alt="image" src="https://github.com/user-attachments/assets/cdbb1e2c-7863-4a25-988f-62c7fa5cd513" />
+##GATO
+<img width="1913" height="1077" alt="image" src="https://github.com/user-attachments/assets/b0d2f044-90d5-4f40-87d0-f50fcfc3f906" />
 
 
 
